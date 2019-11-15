@@ -5,9 +5,9 @@
  */
 package boox;
 
-import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -24,9 +24,9 @@ public class DB {
     public void kiir(int ev) {
         String p = "SELECT * FROM adatok WHERE ev = ?";
         try (Connection kapcs
-                = (Connection) DriverManager.getConnection(dbUrl, user, pass);
+                = DriverManager.getConnection(dbUrl, user, pass);
                 PreparedStatement ekp
-                = (PreparedStatement) kapcs.prepareStatement(p)) {
+                = kapcs.prepareStatement(p)) {
             ekp.setInt(1, ev);
             ResultSet eredmeny = ekp.executeQuery();
             while (eredmeny.next()) {
