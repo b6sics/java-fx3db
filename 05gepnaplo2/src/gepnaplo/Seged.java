@@ -12,7 +12,7 @@ import java.time.LocalTime;
 
 /**
  *
- * @author t1
+ * @author kjg
  */
 public class Seged {
 

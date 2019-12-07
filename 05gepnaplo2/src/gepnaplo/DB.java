@@ -19,7 +19,7 @@ import panel.Panel;
 
 /**
  *
- * @author t1
+ * @author kjg
  */
 public class DB {
 

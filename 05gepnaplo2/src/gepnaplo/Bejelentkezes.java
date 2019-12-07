@@ -66,6 +66,15 @@ public class Bejelentkezes {
         this.iskola = iskola;
     }
 
+    /**
+     *
+     * @param gepnev
+     * @param ido
+     * @param nev
+     * @param allapot
+     * @param osztaly
+     * @param iskola
+     */
     public Bejelentkezes(String gepnev, String ido, String nev,
             String allapot, String osztaly, String iskola) {
         this.gepnev = gepnev;
