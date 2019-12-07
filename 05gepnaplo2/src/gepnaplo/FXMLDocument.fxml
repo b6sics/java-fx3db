@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gepnaplo.FXMLDocumentController">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <TextField fx:id="txtGepszuro" prefWidth="90.0" text="\%" />
+            <ComboBox fx:id="cbxIdo" prefWidth="140.0" />
+            <TextField fx:id="txtNevszuro" prefWidth="140.0" text="\%" />
+            <CheckBox fx:id="chkProb" mnemonicParsing="false" text="Csak a problénások" />
+            <Button mnemonicParsing="false" onAction="#torol" text="Régiek törlése">
+               <HBox.margin>
+                  <Insets left="160.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+      </HBox>
+      <TableView fx:id="tblGepek" prefHeight="500.0">
+        <columns>
+          <TableColumn fx:id="oGep" prefWidth="100.0" text="Gép" />
+          <TableColumn fx:id="oIdo" prefWidth="150.0" text="Idő" />
+            <TableColumn fx:id="oNev" prefWidth="150.0" text="Név" />
+            <TableColumn fx:id="oAllapot" prefWidth="150.0" text="Állapot" />
+            <TableColumn fx:id="oOsztaly" text="Osztály" />
+            <TableColumn fx:id="oIskola" prefWidth="170.0" text="Iskola" />
+        </columns>
+      </TableView>
+   </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
+</VBox>

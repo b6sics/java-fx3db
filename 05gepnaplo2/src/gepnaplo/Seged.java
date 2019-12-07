@@ -26,7 +26,7 @@ public class Seged {
         try {
             return InetAddress.getLocalHost().getHostName();
         } catch (UnknownHostException ex) {
-            return "UnknownHostException: " + ex.toString();
+            return "";
         }
     }
 
