@@ -12,44 +12,44 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="futas.FXMLDocumentController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" prefWidth="250.0" />
-    <ColumnConstraints hgrow="SOMETIMES" prefWidth="95.0" />
-      <ColumnConstraints hgrow="SOMETIMES" prefWidth="200.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
-      <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints prefHeight="200.0" vgrow="SOMETIMES" />
-  </rowConstraints>
-   <children>
-      <TableView fx:id="tblEdzesek" GridPane.rowSpan="5">
-        <columns>
-          <TableColumn fx:id="oDatum" prefWidth="100.0" resizable="false" sortable="false" text="Dátum" />
-          <TableColumn fx:id="oTav" prefWidth="75.0" resizable="false" sortable="false" styleClass="-fx-alignment: CENTER;" text="Táv (m)" />
-            <TableColumn fx:id="oIdo" prefWidth="75.0" resizable="false" sortable="false" styleClass="-fx-alignment: CENTER;" text="Idő (mp)" />
-        </columns>
-      </TableView>
-      <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
-         <children>
-            <Button mnemonicParsing="false" onAction="#uj" prefWidth="70.0" text="Új" />
-            <Button mnemonicParsing="false" onAction="#hozzaad" prefWidth="70.0" text="Hozzáad" />
-            <Button mnemonicParsing="false" onAction="#modosit" prefWidth="70.0" text="Módosít" />
-            <Button mnemonicParsing="false" onAction="#torol" prefWidth="70.0" text="Töröl" />
-         </children>
-      </HBox>
-      <Label text="Dátum:" GridPane.columnIndex="1" />
-      <Label text="Táv (m):" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Label text="Idő (mp):" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <DatePicker fx:id="dpDatum" editable="false" prefWidth="200.0" GridPane.columnIndex="2" />
-      <TextField fx:id="txtTav" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <TextField fx:id="txtIdo" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-      <Label fx:id="lblStat" alignment="TOP_LEFT" contentDisplay="CENTER" text="Label" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS" />
-   </children>
-   <padding>
-      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-   </padding>
+<GridPane hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="10.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="futas.FXMLDocumentController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" prefWidth="250.0" />
+        <ColumnConstraints hgrow="SOMETIMES" prefWidth="95.0" />
+        <ColumnConstraints hgrow="SOMETIMES" prefWidth="200.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints prefHeight="200.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TableView fx:id="tblEdzesek" GridPane.rowSpan="5">
+            <columns>
+                <TableColumn fx:id="oDatum" prefWidth="100.0" resizable="false" sortable="false" text="Dátum" />
+                <TableColumn fx:id="oTav" prefWidth="75.0" resizable="false" sortable="false" style="-fx-alignment: CENTER;" text="Táv (m)" />
+                <TableColumn fx:id="oIdo" prefWidth="75.0" resizable="false" sortable="false" style="-fx-alignment: CENTER;" text="Idő (mp)" />
+            </columns>
+        </TableView>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
+            <children>
+                <Button mnemonicParsing="false" onAction="#uj" prefWidth="70.0" text="Új" />
+                <Button mnemonicParsing="false" onAction="#hozzaad" prefWidth="70.0" text="Hozzáad" />
+                <Button mnemonicParsing="false" onAction="#modosit" prefWidth="70.0" text="Módosít" />
+                <Button mnemonicParsing="false" onAction="#torol" prefWidth="70.0" text="Töröl" />
+            </children>
+        </HBox>
+        <Label text="Dátum:" GridPane.columnIndex="1" />
+        <Label text="Táv (m):" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Idő (mp):" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+        <DatePicker fx:id="dpDatum" editable="false" prefWidth="200.0" GridPane.columnIndex="2" />
+        <TextField fx:id="txtTav" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextField fx:id="txtIdo" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+        <Label fx:id="lblStat" alignment="TOP_LEFT" contentDisplay="CENTER" text="Label" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS" />
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
 </GridPane>
